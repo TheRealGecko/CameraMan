@@ -3,7 +3,6 @@ extends Node2D
 onready var apoc_map = $Apocalyptic_TileMap
 onready var peace_map = $Peacful_TileMap
 onready var sprite = $player
-onready var moving_platform = $MovingPlatform
 
 func _ready():
 	apoc_map.visible = true

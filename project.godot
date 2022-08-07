@@ -13,6 +13,10 @@ config_version=4
 config/name="MiniJam112"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 jump={
