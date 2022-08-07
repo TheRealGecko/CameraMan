@@ -1,9 +1,9 @@
- extends Node2D
+extends Node2D
 
 onready var platform = $Platform
 onready var tween = $MoveTween
 const IDLE_DURATION = 1.0 #num secs the platform stops before going back
-export var move_to = Vector2.LEFT * 528 
+export var move_to = Vector2.UP * 528 
 export var speed = 5.0
 var follow = Vector2.ZERO
 

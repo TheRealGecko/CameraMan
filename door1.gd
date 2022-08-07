@@ -19,7 +19,6 @@ func _ready():
 func _physics_process(delta):
 	set_collision_layer(get_parent().get_collision_layer())
 	if active && position.x >= -100:
-		print("it works!")
 		move_and_slide(Vector2(-100, 0))
 		position.y = 0
 
