@@ -1,4 +1,4 @@
-extends Node2D
+ extends Node2D
 
 onready var platform = $Platform
 onready var tween = $MoveTween

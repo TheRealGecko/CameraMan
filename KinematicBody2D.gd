@@ -6,11 +6,11 @@ var velocity = Vector2(0, 0)
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
 	if Input.is_action_pressed("left"):
-		velocity.x = -100
+		velocity.x = -500
 		sprite.play("walk")
 		sprite.flip_h = true
 	elif Input.is_action_pressed("right"):
-		velocity.x = 100
+		velocity.x = 500
 		sprite.play("walk")
 		sprite.flip_h = false
 	else: 
@@ -33,3 +33,8 @@ func _physics_process(delta):
 func _on_liquid_body_entered(body):
 	position.x = 62
 	position.y = 371
+
+
+func _on_button1_body_entered(body):
+	if get_parent().get_node("Peacful_TileMap/button1/button").get_animation() == "up":
+		get_parent().get_node("Peacful_TileMap/button1/button").play("down")

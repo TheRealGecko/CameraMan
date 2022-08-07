@@ -18,7 +18,7 @@ func _process(delta):
 		click_timer = get_tree().create_timer(0.2)
 	if  Input.is_action_pressed("toggle") and click_timer != null and click_timer.get_time_left() <= 0:
 		print(abs(apoc_map.get_collision_layer()-1))
-		print(abs(peace_map.get_collision_layer()-1))
+		print(abs($Apocalyptic_TileMap/door1.get_collision_layer()-1))
 		apoc_map.set_collision_layer(abs(apoc_map.get_collision_layer()-1))
 		peace_map.set_collision_layer(abs(peace_map.get_collision_layer()-1))
 		apoc_map.visible = !apoc_map.visible

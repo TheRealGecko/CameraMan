@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://res/button_spritesheet.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+} ]
+
+[sub_resource type="GDScript" id=8]
+script/source = "extends AnimatedSprite
+
+func _ready():
+	pass # Replace with function body.
+"
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 16, 7.75 )
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="button" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+animation = "up"
+script = SubResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8.25 )
+shape = SubResource( 6 )
