@@ -13,20 +13,23 @@ func _physics_process(delta):
 		velocity.x = 100
 		sprite.play("walk")
 		sprite.flip_h = false
-	else:
+	else: 
 		velocity.x = 0
 		sprite.play("idle")
 		
-	velocity.y += 10
+	if !is_on_floor(): 
+		velocity.y += 10
 	
 	if !is_on_floor():
 		sprite.play("jump")
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = -250
+		velocity.y = -350
 
 	move_and_slide(velocity, Vector2.UP)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+
+func _on_liquid_body_entered(body):
+	position.x = 62
+	position.y = 371
