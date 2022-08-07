@@ -5,8 +5,7 @@ var velocity = Vector2(0, 0)
 var spawn
 
 func _ready():
-	#spawn = Vector2(62, 371)
-	spawn = Vector2(4633 + 8, 341)
+	spawn = Vector2(62, 371)
 	position = spawn
 
 # Called when the node enters the scene tree for the first time.
