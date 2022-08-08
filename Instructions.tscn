@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://res/barcade-brawl-font/BarcadeBrawlRegular-plYD.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+extra_spacing_bottom = 20
+font_data = ExtResource( 1 )
+
+[node name="Instructions" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 8.0
+margin_right = 1016.0
+margin_bottom = 592.0
+color = Color( 0.980392, 0.862745, 0.662745, 0.596078 )
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 336.0
+margin_top = 48.0
+margin_right = 1352.0
+margin_bottom = 184.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[wave][rainbow]Instructions"
+text = "Instructions"
+
+[node name="Content" type="RichTextLabel" parent="."]
+margin_left = 32.0
+margin_top = 96.0
+margin_right = 1042.0
+margin_bottom = 623.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+text = "
+Press the spacebar to jump
+
+Hold the spacebar to toggle between the past and present
+
+Press the left and right arrow keys to move. 
+
+There are respawn points for when you die. 
+Have fun jumping off ledges!
+"
