@@ -12,6 +12,8 @@ func _physics_process(delta):
 	if get_tree().get_root().get_node("Node2D/Apocalyptic_TileMap").is_visible() == false:
 		set_collision_layer(0)
 		$area.set_collision_layer(0)
+		VisualServer.set_default_clear_color(Color8(228,245,255))
 	else:
 		set_collision_layer(4)
 		$area.set_collision_layer(4)
+		VisualServer.set_default_clear_color(Color8(134,91,91))

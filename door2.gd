@@ -18,8 +18,8 @@ func _ready():
 
 func _physics_process(delta):
 	set_collision_layer(get_parent().get_collision_layer())
-	if active && position.y >= -132:
-		move_and_slide(Vector2(0, -200))
+	if active && position.y >= -172:
+		move_and_slide(Vector2(0, -240))
 		position.x = 1456
 
 func _on_button2_body_entered(body):

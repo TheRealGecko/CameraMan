@@ -11,9 +11,9 @@ func _on_Exit_pressed():
 	pass
 
 func _on_Instructions_pressed():
-	var instructions = load("res://res/Instructions.tscn").instance()
+	var instructions = load("res://Instructions.tscn").instance()
 	get_tree().current_scene.add_child(instructions)
 
 func _on_Storyline_pressed():
-	get_tree().change_scene("res://res/Storyline.tscn")
+	get_tree().change_scene("res://Storyline.tscn")
 
