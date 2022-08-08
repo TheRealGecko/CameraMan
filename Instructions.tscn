@@ -6,7 +6,7 @@
 size = 25
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 20
 extra_spacing_bottom = 20
 font_data = ExtResource( 1 )
@@ -34,21 +34,20 @@ bbcode_enabled = true
 bbcode_text = "[wave][rainbow]Instructions"
 text = "Instructions"
 
-[node name="Content" type="RichTextLabel" parent="."]
-margin_left = 32.0
-margin_top = 96.0
-margin_right = 1042.0
-margin_bottom = 623.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 2 )
-bbcode_enabled = true
-text = "
-Press the spacebar to jump
+[node name="Label" type="Label" parent="."]
+margin_top = 128.0
+margin_right = 1016.0
+margin_bottom = 555.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Press the spacebar to jump
 
-Hold the spacebar to toggle between the past and present
+Hold the spacebar to toggle between 
+the past and present
 
 Press the left and right arrow keys to move. 
 
 There are respawn points for when you die. 
 Have fun jumping off ledges!
 "
+align = 1
